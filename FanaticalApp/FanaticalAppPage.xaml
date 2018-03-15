@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:FanaticalApp" 
+             x:Class="FanaticalApp.FanaticalAppPage"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+        </OnPlatform>
+    </ContentPage.Padding>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="0" Padding="0" BackgroundColor="White">
+
+                
+                <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" Padding="20">
+                    <Label Text="FanaticalApp" FontSize="28" HorizontalOptions="Center"
+                        VerticalOptions="Center" FontAttributes="Bold"  TextColor="Black" AutomationId="homeTitle"/>
+                     <Label Text="Welcome to the Mobile Test App. The prupose of this app is to demonstrate the FanaticalTest Test Factory based on Appium."  
+                            TextColor="Black" AutomationId="welcomeText" />
+                    <Image Source="Ziridis_fanaticaltest_400_237.png" />
+                </StackLayout>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    
+</ContentPage>
