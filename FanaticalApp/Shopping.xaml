@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="FanaticalApp.Shopping"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true">
+
+         <ContentPage.Padding>
+            <OnPlatform x:TypeArguments="Thickness">
+            </OnPlatform>
+        </ContentPage.Padding>  
+    
+        <ContentPage.Content>
+            <ScrollView>
+                <StackLayout Spacing="0" Padding="0" BackgroundColor="White">
+
+                    <StackLayout Orientation="Vertical" Padding="20">
+                        <Label Text="Shopping" FontSize="28" HorizontalOptions="Center"
+                            VerticalOptions="Center" FontAttributes="Bold"  TextColor="Black" AutomationId="shopTitle"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" Padding="20, 0, 20, 0">
+                        <Image Source="rolex.jpeg" />
+                        <Label Text="This watch is the most popular on the IoT device market."  
+                            TextColor="Black" AutomationId="descriptionText" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Padding="20, 0, 20, 0">
+                        <Label Text="Price unit : " TextColor="Black" AutomationId="textPriceUnit" 
+                               VerticalOptions="Center"/>
+                        <Label Text="249.95 CHF" TextColor="Black" AutomationId="textPriceValueUnit" 
+                               VerticalOptions="Center"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" Padding="20, 0, 20, 0">
+                        <Label Text="Add to cart : " TextColor="Black" AutomationId="addToCartText" />
+                            <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                                <Button x:Name="addOneUnitButton" AutomationId="addOneUnitButton" Text="+" Clicked="AddOneUnit" />
+                                <Button x:Name="removeOneUnitButton" AutomationId="removeOneUnitButton" Text="-" Clicked="RemoveOneUnit"/>
+                                <Entry x:Name="nbItem" AutomationId="nbItem"  Text="0"  WidthRequest="50" HorizontalTextAlignment="Center" IsEnabled="false"/>
+                            </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Padding="20, 20, 20, 0" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label Text="Price before VAT : " TextColor="Black" AutomationId="textPriceBeforeVat" 
+                               VerticalOptions="Center"/>
+                        <Label Text="0" TextColor="Black" AutomationId="textPriceBeforeVatValue" 
+                               VerticalOptions="Center" x:Name="textPriceBeforeVatValue"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Padding="20, 20, 20, 0" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label Text="VAT Price : " TextColor="Black" AutomationId="textVatPrice" 
+                               VerticalOptions="Center"/>
+                        <Label Text="0" TextColor="Black" AutomationId="textVatPriceValue" 
+                               VerticalOptions="Center" x:Name="textVatPriceValue"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Padding="20, 20, 20, 0" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label Text="Total Price : " TextColor="Black" AutomationId="textTotalPrice" 
+                               VerticalOptions="Center"/>
+                        <Label Text="0" TextColor="Black" AutomationId="textTotalPriceValue" 
+                               VerticalOptions="Center" x:Name="textTotalPriceValue"/>
+                    </StackLayout>
+
+                </StackLayout>
+            </ScrollView>
+        </ContentPage.Content>
+</ContentPage>

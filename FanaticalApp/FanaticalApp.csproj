@@ -38,6 +38,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Shopping.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -52,6 +56,9 @@
     </Compile>
     <Compile Include="Setup.xaml.cs">
       <DependentUpon>Setup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Shopping.xaml.cs">
+      <DependentUpon>Shopping.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

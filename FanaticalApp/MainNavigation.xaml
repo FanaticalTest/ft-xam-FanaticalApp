@@ -5,12 +5,17 @@
             x:Class="FanaticalApp.MainNavigation">
     <NavigationPage Title="Home" AutomationId="menuHome">
         <x:Arguments>
-            <local:FanaticalAppPage />
+            <local:FanaticalAppPage x:Name="menuHome" />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Shopping" AutomationId="menuShopping">
+        <x:Arguments>
+            <local:Shopping x:Name="menuShopping" />
         </x:Arguments>
     </NavigationPage>
     <NavigationPage Title="Setup" AutomationId="menuSetup">
         <x:Arguments>
-            <local:Setup />
+            <local:Setup x:Name="menuSetup" />
         </x:Arguments>
     </NavigationPage>
 </TabbedPage>
