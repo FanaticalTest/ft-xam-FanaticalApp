@@ -13,9 +13,9 @@
             <local:Shopping x:Name="menuShopping" />
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Title="Setup" AutomationId="menuSetup">
+    <NavigationPage Title="Config" AutomationId="menuConfig">
         <x:Arguments>
-            <local:Setup x:Name="menuSetup" />
+            <local:Config x:Name="menuConfig" />
         </x:Arguments>
     </NavigationPage>
 </TabbedPage>

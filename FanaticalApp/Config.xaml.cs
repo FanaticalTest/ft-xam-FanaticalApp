@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace FanaticalApp
 {
-    public partial class Setup : ContentPage
+    public partial class Config : ContentPage
     {
-        public Setup()
+        public Config()
         {
             InitializeComponent();
         }
