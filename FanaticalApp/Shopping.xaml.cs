@@ -14,7 +14,7 @@ namespace FanaticalApp
             DisableMinus();
         }
 
-        async void AddOneUnit(object sender, EventArgs e)
+        private void AddOneUnit(object sender, EventArgs e)
         {
             int actualNbItem = Int32.Parse(nbItem.Text);
 
@@ -26,7 +26,7 @@ namespace FanaticalApp
             DisableMinus();
         }
 
-        async void RemoveOneUnit(object sender, EventArgs e)
+        private void RemoveOneUnit(object sender, EventArgs e)
         {
             int actualNbItem = Int32.Parse(nbItem.Text);
 
@@ -36,6 +36,23 @@ namespace FanaticalApp
 
             nbItem.Text = actualNbItem.ToString();
             DisableMinus();
+        }
+
+        private void AddToCart(object sender, EventArgs e)
+        {
+            if (Int32.Parse(nbItem.Text)> 0)
+            {
+                string message = "your order has been processed. Total ammount of " + textTotalPriceValue.Text + " CHF will be billed.";
+                DisplayAlert("Order processed", message, "OK");
+                nbItem.Text = "0";
+                CalculateTotalPricing(0);
+                DisableMinus();
+            }
+            else
+            {
+                DisplayAlert("Please select a quantity", "In order to procees your order, please select at least one item", "OK");
+            }
+
         }
 
         private void CalculateTotalPricing(int nbUnit)

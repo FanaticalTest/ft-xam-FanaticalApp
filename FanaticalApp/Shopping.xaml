@@ -15,17 +15,20 @@
             <ScrollView>
                 <StackLayout Spacing="0" Padding="0" BackgroundColor="White">
 
+                    <!-- Title section -->
                     <StackLayout Orientation="Vertical" Padding="20">
                         <Label Text="Shopping" FontSize="28" HorizontalOptions="Center"
                             VerticalOptions="Center" FontAttributes="Bold"  TextColor="Black" AutomationId="shopTitle"/>
                     </StackLayout>
 
+                    <!-- picture section -->
                     <StackLayout Orientation="Vertical" Padding="20, 0, 20, 0">
                         <Image Source="rolex.jpeg" />
                         <Label Text="This watch is the most popular on the IoT device market."  
                             TextColor="Black" AutomationId="descriptionText" />
                     </StackLayout>
 
+                    <!-- Description and unit price section -->
                     <StackLayout Orientation="Horizontal" Padding="20, 0, 20, 0">
                         <Label Text="Price unit : " TextColor="Black" AutomationId="textPriceUnit" 
                                VerticalOptions="Center"/>
@@ -33,6 +36,7 @@
                                VerticalOptions="Center"/>
                     </StackLayout>
 
+                    <!-- Select number of items section -->
                     <StackLayout Orientation="Vertical" Padding="20, 20, 20, 0">
                         <Label Text="Select number of items : " TextColor="Black" AutomationId="addToCartText" />
                             <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
@@ -42,29 +46,7 @@
                             </StackLayout>
                     </StackLayout>
 
-                <!--
-                    <StackLayout Orientation="Horizontal" Padding="20, 20, 20, 0" VerticalOptions="Center" HorizontalOptions="Center">
-                        <Label Text="Price before VAT : " TextColor="Black" AutomationId="textPriceBeforeVat" 
-                               VerticalOptions="Center"/>
-                        <Label Text="0" TextColor="Black" AutomationId="textPriceBeforeVatValue" 
-                               VerticalOptions="Center" x:Name="textPriceBeforeVatValue"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal" Padding="20, 20, 20, 0" VerticalOptions="Center" HorizontalOptions="Center">
-                        <Label Text="VAT Price : " TextColor="Black" AutomationId="textVatPrice" 
-                               VerticalOptions="Center"/>
-                        <Label Text="0" TextColor="Black" AutomationId="textVatPriceValue" 
-                               VerticalOptions="Center" x:Name="textVatPriceValue"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal" Padding="20, 20, 20, 0" VerticalOptions="Center" HorizontalOptions="Center">
-                        <Label Text="Total Price : " TextColor="Black" AutomationId="textTotalPrice" 
-                               VerticalOptions="Center"/>
-                        <Label Text="0" TextColor="Black" AutomationId="textTotalPriceValue" 
-                               VerticalOptions="Center" x:Name="textTotalPriceValue"/>
-                    </StackLayout>
-                    -->
-                
+                    <!-- Total pricing section -->
                     <StackLayout Orientation="Vertical" Padding="20, 20, 20, 0">
                         <Grid>
                           <Grid.RowDefinitions>
@@ -89,6 +71,16 @@
                             <Label Text="0" TextColor="Black" AutomationId="textTotalPriceValue" 
                                VerticalOptions="Center" x:Name="textTotalPriceValue"  Grid.Row="2" Grid.Column="1" />
                         </Grid>
+                    </StackLayout>
+
+                    <!-- add to cart button section -->
+                    <StackLayout Orientation="Vertical" Padding="20, 20, 20, 0">
+                        <Button x:Name="buttonAddToCart" Text="Add to cart" Clicked="AddToCart" TextColor="Black" AutomationId="buttonAddToCart" 
+                            BorderColor="Black"
+                            HorizontalOptions="Center"
+                            BorderRadius="5"
+                            BorderWidth="3"
+                            WidthRequest="200"/>
                     </StackLayout>
 
                 </StackLayout>
