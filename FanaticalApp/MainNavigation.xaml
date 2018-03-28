@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            xmlns:local="clr-namespace:FanaticalApp;assembly=FanaticalApp" 
+            x:Class="FanaticalApp.MainNavigation">
+    <NavigationPage Title="Home" AutomationId="menuHome">
+        <x:Arguments>
+            <local:FanaticalAppPage x:Name="menuHome" />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Shopping" AutomationId="menuShopping">
+        <x:Arguments>
+            <local:Shopping x:Name="menuShopping" />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Setup" AutomationId="menuSetup">
+        <x:Arguments>
+            <local:Setup x:Name="menuSetup" />
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>
