@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="FanaticalApp.Setup"
+             x:Class="FanaticalApp.Config"
              NavigationPage.HasNavigationBar="False"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              ios:Page.UseSafeArea="true">
@@ -16,7 +16,7 @@
                 <StackLayout Spacing="0" Padding="0" BackgroundColor="White">
 
                     <StackLayout Orientation="Vertical" Padding="20">
-                        <Label Text="Setup" FontSize="28" HorizontalOptions="Center"
+                        <Label Text="Configuration" FontSize="28" HorizontalOptions="Center"
                             VerticalOptions="Center" FontAttributes="Bold"  TextColor="Black" AutomationId="setupTitle"/>
                     </StackLayout>
 
