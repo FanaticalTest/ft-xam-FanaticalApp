@@ -24,7 +24,10 @@
                     <!-- picture section -->
                     <StackLayout Orientation="Vertical" Padding="20, 0, 20, 0">
                         <Image Source="rolex.jpeg" />
-                        <Label Text="This watch is the most popular on the IoT device market."  
+                        <Label Text="This watch is the most popular on the IoT device market. 
+                        Access unique workouts with step-by-step coaching designed to make you a more dynamic runner. 
+                        Instantly access call, text and calendar alerts and apps for weather, sports and more.
+                        The NFC chip lets you access your credit cards to pay on-the-go with a few simple swipes."  
                             TextColor="Black" AutomationId="descriptionText" />
                     </StackLayout>
 
