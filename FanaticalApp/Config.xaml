@@ -31,6 +31,7 @@
                             <RowDefinition Height="60" />
                             <RowDefinition Height="60" />
                             <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
                           </Grid.RowDefinitions>
                           <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="120" />
@@ -58,7 +59,12 @@
                                 WidthRequest="50" x:Name="sliderAdjustTranparency" Grid.Row="4" Grid.Column="1" />
                             <Label Text="Purchase date" TextColor="Black" AutomationId="textPurchaseDate" 
                                VerticalOptions="Center" Grid.Row="5" Grid.Column="0" HorizontalTextAlignment="End" LineBreakMode="WordWrap"/>
-                            <DatePicker AutomationId="datepickerPurchaseDate" Format="dd/MM/yyyy" Grid.Row="5" Grid.Column="1" />
+                            <DatePicker AutomationId="datepickerPurchaseDate" Format="dd/MM/yyyy" Grid.Row="5" Grid.Column="1" x:Name="datepickerPurchaseDate" />
+                            <Label Text="Version" TextColor="Black" AutomationId="textVersion" 
+                               VerticalOptions="Center" Grid.Row="6" Grid.Column="0" HorizontalTextAlignment="End" LineBreakMode="WordWrap"/>
+                            <!-- Update version number on each release-->
+                            <Label Text="1.0.0" TextColor="Black" AutomationId="textVersionValue" x:Name="textVersionValue"
+                               VerticalOptions="Center" Grid.Row="6" Grid.Column="1" HorizontalTextAlignment="Start" LineBreakMode="WordWrap"/>
                         </Grid>
                     </StackLayout>
 

@@ -19,6 +19,7 @@ namespace FanaticalApp
             inputFirstName.Text = "John";
             inputLastName.Text = "Doe";
             inputCity.Text = "Geneva";
+            datepickerPurchaseDate.Date = DateTime.Now; 
         }
     }
 }
