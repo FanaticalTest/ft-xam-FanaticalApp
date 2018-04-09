@@ -15,40 +15,66 @@
             <ScrollView>
                 <StackLayout Spacing="0" Padding="0" BackgroundColor="White">
 
+                    <!-- Title section -->
                     <StackLayout Orientation="Vertical" Padding="20">
                         <Label Text="Configuration" FontSize="28" HorizontalOptions="Center"
                             VerticalOptions="Center" FontAttributes="Bold"  TextColor="Black" AutomationId="setupTitle"/>
                     </StackLayout>
 
-                    <StackLayout Orientation="Horizontal" Padding="20">
-                        <Label Text="Link to Soccial media :" TextColor="Black" AutomationId="textLinkToSocialMedia" 
-                               VerticalOptions="Center"/>
-                        <Switch AutomationId="switchLinkToSocialMedia" IsToggled="true"  
-                                VerticalOptions="Center" x:Name="switchLinkToSocialMedia"/>
+                    <!-- User info section -->
+                    <StackLayout Orientation="Horizontal" Padding="20, 20, 20, 0">
+                        <Grid>
+                          <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                          </Grid.RowDefinitions>
+                          <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="120" />
+                            <ColumnDefinition Width="*"/>
+                          </Grid.ColumnDefinitions>
+                            <Label Text="Frist Name" TextColor="Black" AutomationId="textFirstName" 
+                               VerticalOptions="Center" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="0" />
+                            <Entry x:Name="inputFirstName" AutomationId="inputFirstName"  Text="John"  WidthRequest="200" 
+                                   Grid.Row="0" Grid.Column="1" />
+                            <Label Text="Last name" TextColor="Black" AutomationId="textLastName" 
+                               VerticalOptions="Center" HorizontalTextAlignment="End" Grid.Row="1" Grid.Column="0" />
+                            <Entry x:Name="inputLastName" AutomationId="inputLastName"  Text="Doe"  WidthRequest="200" 
+                                   Grid.Row="1" Grid.Column="1"  />
+                            <Label Text="City" TextColor="Black" AutomationId="textCity" 
+                               VerticalOptions="Center" HorizontalTextAlignment="End" Grid.Row="2" Grid.Column="0" />
+                            <Entry x:Name="inputCity" AutomationId="inputCity"  Text="Geneva"  WidthRequest="200" 
+                                   Grid.Row="2" Grid.Column="1"  />
+                            <Label Text="Link to Social media" TextColor="Black" AutomationId="textLinkToSocialMedia" 
+                               VerticalOptions="Center" Grid.Row="3" Grid.Column="0" HorizontalTextAlignment="End" LineBreakMode="WordWrap" />
+                            <Switch AutomationId="switchLinkToSocialMedia" IsToggled="true"  
+                                VerticalOptions="Center" x:Name="switchLinkToSocialMedia" Grid.Row="3" Grid.Column="1" HorizontalOptions="Start"/>
+                            <Label Text="Adjust title tranparency" TextColor="Black" AutomationId="textAdjustTranparency" 
+                               VerticalOptions="Center"  Grid.Row="4" Grid.Column="0"  HorizontalTextAlignment="End"  LineBreakMode="WordWrap"/>
+                            <Slider Value="0.5" AutomationId="sliderAdjustTranparency" 
+                                WidthRequest="50" x:Name="sliderAdjustTranparency" Grid.Row="4" Grid.Column="1" />
+                            <Label Text="Purchase date" TextColor="Black" AutomationId="textPurchaseDate" 
+                               VerticalOptions="Center" Grid.Row="5" Grid.Column="0" HorizontalTextAlignment="End" LineBreakMode="WordWrap"/>
+                            <DatePicker AutomationId="datepickerPurchaseDate" Format="dd/MM/yyyy" Grid.Row="5" Grid.Column="1" x:Name="datepickerPurchaseDate" />
+                            <Label Text="Version" TextColor="Black" AutomationId="textVersion" 
+                               VerticalOptions="Center" Grid.Row="6" Grid.Column="0" HorizontalTextAlignment="End" LineBreakMode="WordWrap"/>
+                            <!-- Update version number on each release-->
+                            <Label Text="1.0.0" TextColor="Black" AutomationId="textVersionValue" x:Name="textVersionValue"
+                               VerticalOptions="Center" Grid.Row="6" Grid.Column="1" HorizontalTextAlignment="Start" LineBreakMode="WordWrap"/>
+                        </Grid>
                     </StackLayout>
 
-                    <StackLayout Orientation="Horizontal" Padding="20">
-                        <Label Text="Adjust tranparency :" TextColor="Black" AutomationId="textAdjustTranparency" 
-                               VerticalOptions="Center"/>
-                        <Slider Value="0.5" AutomationId="sliderAdjustTranparency" 
-                                WidthRequest="100" x:Name="sliderAdjustTranparency" />
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal" Padding="20">
-                        <Label Text="Purchase date :" TextColor="Black" AutomationId="textPurchaseDate" 
-                               VerticalOptions="Center"/>
-                        <DatePicker AutomationId="datepickerPurchaseDate" Format="dd/MM/yyyy" />
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal" Padding="20">
-                        <Label Text="Reset to default :" TextColor="Black" AutomationId="textReset" 
-                               VerticalOptions="Center"/>
+                    <!-- Reset section -->
+                    <StackLayout Orientation="Horizontal" Padding="20" HorizontalOptions="Center">
                         <Button x:Name="buttonReset" Text="Reset" Clicked="OnReset" TextColor="Black" AutomationId="buttonReset" 
                             BorderColor="Black"
-                            HorizontalOptions="Center"
                             BorderRadius="5"
                             BorderWidth="3"
-                            WidthRequest="100"/>
+                            WidthRequest="100" />
                     </StackLayout>
 
                 </StackLayout>
