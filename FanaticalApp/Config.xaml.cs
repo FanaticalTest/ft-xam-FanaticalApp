@@ -12,11 +12,14 @@ namespace FanaticalApp
             InitializeComponent();
         }
 
-        async void OnReset(object sender, EventArgs e)
+        private void OnReset(object sender, EventArgs e)
         {
             switchLinkToSocialMedia.IsToggled = true;
             sliderAdjustTranparency.Value = 0.5;
-
+            inputFirstName.Text = "John";
+            inputLastName.Text = "Doe";
+            inputCity.Text = "Geneva";
+            datepickerPurchaseDate.Date = DateTime.Now; 
         }
     }
 }
